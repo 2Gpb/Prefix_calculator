@@ -25,6 +25,11 @@ jobs:
 
       - name: Build artifact
         run: python build.py
+      - name: Archive artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: prefix_calculator
+          path: path/to/artifact
         if: success()
 
       - name: Upload artifact
