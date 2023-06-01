@@ -23,20 +23,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Build artifact
-        run: python build.py
-      - name: Archive artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: prefix_calculator
-          path: path/to/artifact
-        if: success()
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: prefix_calculator
-          path: path/to/artifact
+  
           
           
           
